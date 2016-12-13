@@ -35,6 +35,12 @@ defmodule Alchemapi.Web do
     |> halt
   end
 
+  get "/supersecret" do
+    conn
+    |> send_resp(200, "You've reached the super secret code! The password is: abc123")
+    |> halt
+  end
+
   match _ do
     conn
     |> send_resp(404, "Nothing here")

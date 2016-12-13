@@ -34,4 +34,10 @@ defmodule Alchemapi.Web do
     |> send_resp(200, "ok")
     |> halt
   end
+
+  match _ do
+    conn
+    |> send_resp(404, "Nothing here")
+    |> halt
+  end
 end
